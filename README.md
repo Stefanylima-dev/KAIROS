@@ -52,7 +52,8 @@ A arquitetura das tabelas foi planejada para manter o histórico financeiro inta
 
 ## ⚙️ Foco do Desenvolvimento (Lógica > Estética)
 
-Este projeto foi construído sob uma perspectiva estritamente voltada para a **engenharia de software e lógica backend**. Em vez de focar em designs complexos ou animações carregadas, a prioridade máxima foi dada à integridade das transações do banco de dados, tratamento de exceções em queries relacionais e a fluidez das regras que governam o fluxo das mercadorias. O resultado é um sistema rápido, limpo e extremamente prático para o ambiente corporativo.
+Meu foco era mais voltado para a lógica do projeto e por isso fiz uma interface mais voltada para a usabilidade.
+
 
 ---
 
