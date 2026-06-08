@@ -61,12 +61,3 @@ A arquitetura das tabelas foi planejada para manter o histórico financeiro inta
 ## ⚙️ Foco do Desenvolvimento (Lógica > Estética)
 
 Meu foco era mais voltado para a lógica do projeto e por isso fiz uma interface mais voltada para a usabilidade.
-
-
----
-
-## 🚀 Como Executar o Projeto Localmente
-
-1. **Clone o repositório:**
-```bash
-   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
