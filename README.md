@@ -10,7 +10,7 @@ O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real 
   <p><em>Adicione aqui os prints das telas do seu projeto para enriquecer a documentação!</em></p>
   
   <!-- Substitua o link dentro do 'src' pelo caminho da sua imagem se preferir -->
-  <img src="image_bf2cd1.png" alt="Painel de Controle Kairós" width="85%"><br>
+  <img src="Menu.png" alt="Painel de Controle Kairós" width="85%"><br>
   <p><strong>Painel de Controle com alertas automáticos</strong></p>
   
   <img src="image_bf2ff5.png" alt="Itens em Estoque" width="85%"><br>
