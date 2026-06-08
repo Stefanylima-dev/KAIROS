@@ -20,7 +20,7 @@ O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real 
   <img src="Tela_de_Estoque.png" alt="Visualização do Estoque" width="85%"><br>
   <p><strong>💸 Tela de Estoque e Retirada por Venda</strong></p>
 
-  <img src="Tela_de_Relatório.png" alt="Relatório Geral" width="85%"><br>
+  <img src="Tela_de_Relatorio.png" alt="Relatório Geral" width="85%"><br>
   <p><strong>🪵 Relatório Geral e Automação de Perdas</strong></p>
 
 </div>
