@@ -7,14 +7,22 @@ O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real 
 ## 📸 Demonstração do Sistema
 
 <div align="center">
-  <p><em>Adicione aqui os prints das telas do seu projeto para enriquecer a documentação!</em></p>
   
-  <!-- Substitua o link dentro do 'src' pelo caminho da sua imagem se preferir -->
   <img src="Menu.png" alt="Painel de Controle Kairós" width="85%"><br>
-  <p><strong>Painel de Controle com alertas automáticos</strong></p>
+  <p><strong>📊 Painel de Controle com alertas automáticos</strong></p>
   
-  <img src="Menu.png" alt="Itens em Estoque" width="85%"><br>
-  <p><strong>Visualização física do estoque e ações rápidas</strong></p>
+  <img src="Tela_de_Cadastro.png" alt="Cadastro de Produtos" width="85%"><br>
+  <p><strong>📥 Tela de Inserção e Cadastro Inteligente</strong></p>
+
+  <img src="Tela_de_Busca.png" alt="Busca de Produtos" width="85%"><br>
+  <p><strong>🔍 Sistema de Busca e Consulta Ágil</strong></p>
+
+  <img src="Tela_de_Estoque.png" alt="Visualização do Estoque" width="85%"><br>
+  <p><strong>💸 Tela de Estoque e Retirada por Venda</strong></p>
+
+  <img src="Tela_de_Relatório.png" alt="Relatório Geral" width="85%"><br>
+  <p><strong>🪵 Relatório Geral e Automação de Perdas</strong></p>
+
 </div>
 
 ---
