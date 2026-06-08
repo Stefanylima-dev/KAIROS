@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Vendas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estoque.css') }}">
+</head>
+<body>
+    <h1>Histórico de Vendas Realizadas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID da Venda</th>
+                <th>Produto Vendido</th>
+                <th>Quantidade</th>
+                <th>Data/Hora da Venda</th>
+                <th>Preço Venda</th>
+                <th>Faturamento Bruto</th>
+                <th>Lucro</th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for venda in vendas %}
+            <tr>
+                <td>{{ venda.id }}</td>
+                <td>{{ venda.nome_produto }}</td>
+                <td>{{ venda.quantidade }} un</td>
+                <td>{{ venda.data_venda }}</td>
+                <td>{{ venda.preco_venda }}</td>
+                <td>{{ venda.faturamento_bruto }}</td>
+                <td>{{ venda.lucro }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="7" style="text-align: center; color: #666;">Nenhuma venda realizada ainda.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1> Histórico de Perdas e Descartes</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <thead>
+        <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Vencimento do Item</th>
+            <th>Preço de custo</th>
+            <th>Prejuízo Total</th>
+            <th>Motivo da Perda</th>
+            <th>Data do Descarte</th> </tr>
+        </thead>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for perda in perdas %}
+            <tr>
+                <td>{{ perda.id }}</td>
+                <td style="color: #c62828; font-weight: bold;">{{ perda.nome_produt }}</td>
+                <td>{{ perda.quantidade }} un</td>
+                <td>{{ perda.data_validade }}</td>
+                <td>{{ perda.preco_custo }}</td>
+                <td>{{ perda.prejuizo }}</td>
+                <td>{{ perda.motivo }}</span></td>
+                <td>{{ perda.data_perda }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="8" style="text-align: center; color: #666;">Nenhuma perda registrada até o momento.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    
+    <br>
+    <a href="/" class="btn-voltar">Voltar para o Menu</a>
+</body>
+</html>

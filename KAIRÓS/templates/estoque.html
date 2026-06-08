@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque e Validade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estoque.css') }}">
+</head>
+<body>
+    <h1>Itens em Estoque</h1>
+
+    <a href="/buscar" class="btn-buscar"> Buscar</a>
+    
+
+    <table> 
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Código de barras</th>
+                <th>Quantidade</th>
+                <th>Lote</th>
+                <th>Preço de custo</th>
+                <th>Preço de venda</th>
+                <th>Vencimento</th>
+                <th>Status / Alerta</th>
+                <th>Ações</th> 
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+            <tr>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.codigo_barras }}</td>
+                <td>{{ produto.quantidade }}</td>
+                <td>{{ produto.lote }}</td>
+                <td>{{ produto.preco }}</td>
+                <td>{{ produto.preco_venda }}</td>
+                <td>{{ produto.data_validade }}</td>
+                
+                
+                {# Cor baseada no texto do alerta #}
+                <td class="{% if 'vence em' in produto.alerta %}status-alerta{% else %}status-ok{% endif %}">
+                    {{ produto.alerta }}
+                </td> 
+                
+                <td>
+                    <form action="/registrar_venda/{{ produto.id }}" method="POST" style="display:flex; gap: 5px; align-items: center; margin: 0;">
+                        <input type="number" name="qtd_desejada" value="1" min="1" max="{{ produto.quantidade }}" style="width: 60px; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                        
+                        <button type="submit" 
+                        style="background-color: #ac0000;
+                               color: white;
+                               border: none;
+                               padding: 5px 10px;
+                               border-radius: 20px;
+                               cursor: pointer;
+                               font-weight: bold;
+                               white-space: nowrap;">
+                             Vender
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> <br>
+    <a href="/" class="btn-voltar">Voltar para o Menu</a>
+</body>
+</html>

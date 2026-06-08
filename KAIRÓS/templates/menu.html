@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+<body>
+    <div class="caixa-menu">
+        <h1>Kairós</h1>
+        <div class="botoes-container">
+            <a href="/cadastro" class="btn-cadastro"> Cadastrar</a>
+            <a href="/estoque" class="btn-estoque"> Estoque</a>
+            <a href="/relatorio_geral" class="btn-relatorio_geral"> Relatório Geral</a>
+        </div>
+    </div>
+    
+    <div class="conteudo-principal">
+        <h2>Painel de Controle</h2>
+        <p>Acompanhe o status das mercadorias em tempo real:</p>
+
+        <div class="alerta-validade">
+            <h3>⚠️ Alertas Críticos de Validade</h3>
+            
+            {% if alertas %}
+                <div class="lista-alertas">
+                    {% for item in alertas %}
+                        <!-- Exibe apenas os produtos que estão próximos de vencer -->
+                        <div class="item-alerta aviso">
+                            <strong>⚠️ ATENÇÃO - {{ item.nome }}</strong>
+                            <p>Lote: {{ item.lote }} | Qtd: {{ item.quantidade }} un | 
+                            <span class="dias">Vence em {{ item.dias_restantes }} dias!</span></p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="sucesso-validade">
+                    🌟 Excelente! Nenhum produto próximo do vencimento (nos próximos 30 dias).
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

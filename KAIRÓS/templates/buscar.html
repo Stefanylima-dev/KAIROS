@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='buscar.css') }}">
+</head>
+<body>
+     <div class="caixa-busca">
+    <h1>Buscar Produto</h1>
+    
+    <form action="/buscar" method="POST">
+        <label>Nome do Produto:</label>
+        <input type="text" name="termo_busca" value="{{ termo }}" required placeholder="Ex: Sal...">
+        <button type="submit" style="background-color: #ac0000;
+                               color: white;
+                               border: none;
+                               padding: 5px 10px;
+                               border-radius: 20px;
+                               cursor: pointer;
+                               font-weight: bold;
+                               white-space: nowrap;"
+        >Pesquisar</button>
+    </form>
+
+    {% if termo %}
+        <h2>Resultados para: "{{ termo }}"</h2>
+        
+        {% if produtos %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Lote</th>
+                        <th>Vencimento</th>
+                        <th>Status / Alerta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for produto in produtos %}
+                    <tr>
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.quantidade }}</td>
+                        <td>{{ produto.lote }}</td>
+                        <td>{{ produto.data_validade }}</td>
+                        <td class="{% if 'vencido' in produto.alerta %}status-vencido{% elif 'vence em' in produto.alerta %}status-alerta{% else %}status-ok{% endif %}">
+                            {{ produto.alerta }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p style="color: red; font-weight: bold;">Nenhum produto encontrado.</p>
+        {% endif %}
+    {% endif %}
+
+    <br><br>
+ <a href="/estoque" class="btn-voltar">Voltar para o Estoque</a>
+    </div>
+</body>
+</html>

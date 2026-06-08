@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+</head>
+<body>
+<div class="caixa-cadastro">
+    <h2>Cadastrar Produto</h2>
+    
+    <form action="/cadastrar" method="POST">
+        
+        <div class="grupo-input">
+            <label for="name_product">Produto:</label>
+            <input type="text" id="name_product" placeholder="Digite o nome do produto" name="name_product" required>
+        </div>
+
+        <div class="grupo-input">
+            <label for="codigo_barras">Código de Barra:</label>
+            <input type="text" id="codigo_barras" placeholder="Código de Barra" name="codigo_barras">
+            
+        </div>
+
+        <div class="grupo-input">
+            <label for="amount_product">Quantidade:</label>
+            <input type="number" id="amount_product" placeholder="Quantidade" name="amount_product" required>
+        </div>
+
+         <div class="grupo-input">
+            <label for="batch_product">Lote:</label>
+            <input type="text" id="batch_product" placeholder="Lote" name="batch_product" required>
+        </div>
+
+        <div class="grupo-input">
+            <label for="preco">Preço de custo:</label>
+            <input type="text" id="preco" placeholder="Ex: 3.99" name="preco">
+        </div>
+
+         <div class="grupo-input">
+            <label for="preco_venda">Preço de venda:</label>
+            <input type="text" id="preco" placeholder="Ex: 3.99" name="preco_venda">
+        </div>
+
+        <div class="grupo-input">
+            <label for="date_maturity">Data de vencimento:</label>
+            <input type="date" id="date_maturity" name="date_maturity" required>
+        </div>
+
+        
+        <button type="submit" class="btn-enviar"
+        style="background-color: #ac0000;
+             color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            white-space: nowrap;">Cadastrar Produto</button>
+        
+        
+    </form>
+     <a href="/" class="btn-voltar">Voltar para o Menu</a>
+
+    
+    
+</div>
+</body>
+</html>
