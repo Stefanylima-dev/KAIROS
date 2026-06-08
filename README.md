@@ -13,7 +13,7 @@ O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real 
   <img src="Menu.png" alt="Painel de Controle Kairós" width="85%"><br>
   <p><strong>Painel de Controle com alertas automáticos</strong></p>
   
-  <img src="image_bf2ff5.png" alt="Itens em Estoque" width="85%"><br>
+  <img src="Menu.png" alt="Itens em Estoque" width="85%"><br>
   <p><strong>Visualização física do estoque e ações rápidas</strong></p>
 </div>
 
