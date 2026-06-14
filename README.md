@@ -7,7 +7,7 @@ O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real 
 ## 🎯 Principais Funcionalidades
 
 * **📊 Painel de Controle Intuitivo:** Interface limpa que exibe alertas preventivos automáticos de produtos com vencimento próximo (configurado para os próximos 30 dias).
-* <img src="<img width="1908" height="900" alt="Captura de tela 2026-06-08 091917" src="https://github.com/user-attachments/assets/6304267f-03d2-4b88-9d7d-8e01a5b019e0" />
+<img src="<img width="1908" height="900" alt="Captura de tela 2026-06-08 091917" src="https://github.com/user-attachments/assets/6304267f-03d2-4b88-9d7d-8e01a5b019e0" />
 " width="700">
 * **📥 Inserção e Cadastro Estruturado:** Tela dedicada para entrada de mercadorias registrando nome, código de barras, quantidade, lote, preço de custo, preço de venda e data de validade.
 * 
