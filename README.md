@@ -1,18 +1,14 @@
 # 🚀 Kairós - Sistema Inteligente de Gestão de Estoque e Validade
 
 O **Kairós** é uma aplicação web desenvolvida para resolver um desafio real enfrentado por muitos comércios: a gestão inteligente de estoque com foco no controle rigoroso de prazos de validade. Integrando **Python (Flask)** e **MySQL**, o sistema automatiza processos críticos para minimizar perdas financeiras e combater o desperdício de alimentos.
-<img src="<img width="1908" height="900" alt="Captura de tela 2026-06-08 091917" src="https://github.com/user-attachments/assets/6304267f-03d2-4b88-9d7d-8e01a5b019e0" />
-" width="700">
 ---
 
 ## 🎯 Principais Funcionalidades
 
 * **📊 Painel de Controle Intuitivo:** Interface limpa que exibe alertas preventivos automáticos de produtos com vencimento próximo (configurado para os próximos 30 dias).
 * **📥 Inserção e Cadastro Estruturado:** Tela dedicada para entrada de mercadorias registrando nome, código de barras, quantidade, lote, preço de custo, preço de venda e data de validade.
-* 
 * **🔍 Busca e Consulta Ágil:** Mecanismo de busca dinâmico integrado ao banco de dados que localiza lotes ou produtos instantaneamente por nome.
 * **💸 Retirada por Venda e Gestão Financeira:** Baixa automatizada de unidades no estoque físico em tempo real, calculando o faturamento bruto e a margem de lucro gerada a cada operação.
-* 
 * **🪵 Automação de Perdas:** Regra de negócio backend que identifica produtos expirados, remove-os de circulação e migra os dados para um histórico detalhado de descartes e prejuízos.
 
 ---
